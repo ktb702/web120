@@ -1,44 +1,46 @@
 /* start reCAPTCHA styles */
 
-       form>div {
-            margin:1em;
-        }
-        
-       /* writes to small text above reCAPTCHA upon failure */
+/* writes to small text above reCAPTCHA upon failure */
+.dateFeedback{
+    font-style:italic;
+    font-size:70%;
+    font-weight:bold;
+    color:#f00;
+}
+input:required {
+      border: 1px solid red;
+}
 
-        .dateFeedback{
-            font-style:italic;
-            font-size:70%;
-            font-weight:bold;
-            color:#f00;
-        }
+ input:optional, textarea:optional {
+     background-color:#f1f1f1;
+     border:1px solid #ccc;
+}
 
-        input:required {
-              border: 1px solid red;
-        }
+input[type="submit"], input[type="button"] {
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px #ccc;
+  padding: 0.3em 0.5em;
+}
 
-         input:optional, textarea:optional {
-             background-color:#f1f1f1;
-             border:1px solid #ccc;
-        }
+fieldset {
+  border: 1px solid #ccc;
+  max-width: 350px;
+}
 
-        input[type="submit"], input[type="button"] {
-          background-color: #fff;
-          border-radius: 4px;
-          border: solid 1px #ccc;
-          padding: 0.3em 0.5em;
-        }
+legend {
+  margin-left: 0.5em;
+  padding: 0.2em 0.5em;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
 
-        fieldset {
-          border: 1px solid #ccc;
-          max-width: 350px;
-        }
+@media all and (min-width:501px){
+    div.wrapper form{
+        margin-left:22.8px;
 
-        legend {
-          margin-left: 0.5em;
-          padding: 0.2em 0.5em;
-          border-left: 1px solid #ccc;
-          border-right: 1px solid #ccc;
-        }
-        
-        /* end reCAPTCHA styles */
+    }
+}
+
+
+/* end reCAPTCHA styles */

@@ -1,6 +1,6 @@
 <?php include "includes/header.php";?>
 
-    <h2>Flowchart</h2>
+    <h2 class="pageID"><?=$pageID?></h2>
        <p>Under Construction </p>
     </section>
     <!-- END LEFT COLUMN-->
