@@ -1,0 +1,121 @@
+/* WEB120 BIG Website Styles */
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    text-align: center;
+}
+
+main.wrapper{
+    overflow: auto;
+    min-height: 500px;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+} 
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    clear:both;
+}  
+
+/* DESKTOP */
+@media all and (min-width:1200px) {
+    
+    main.wrapper {
+         width:100%;
+         margin:auto;
+     }
+ 
+     section {
+         width:65%;
+         float:left;
+     }
+     
+      aside {    
+         width:34%;
+         float:right;
+     }
+             
+     img.desktop {
+         float:left;
+         width:50%;
+         display:inline-block;
+         margin: 1em 1em 1em 0;
+     }
+     
+     img.tablet, img.phone {
+         display:none;
+     }  
+     
+     /* Change background color of navigation on selected page */ 
+     .navbar li a.active {
+        text-transform: uppercase;
+        font-weight: bolder;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+    }  
+ }
+ 
+ /* TABLET */
+ @media all and (min-width:738px) and (max-width:1199px) {
+     
+     section {
+         width:60%;
+         float:left;
+     }
+     
+     aside {    
+         width:39%;
+         float:right;
+     }
+     
+     img.tablet {
+         width:100%;
+         display:inline-block;
+     }
+     
+     img.desktop, img.phone {
+         display:none;
+     }  
+     
+     
+     /* Change background color of navigation on selected page */
+     .navbar li a.active {
+         text-transform: uppercase;
+         font-weight: bolder;
+         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+     }
+ }
+ 
+ /* PHONE */
+ @media all and (max-width:737px) {
+     
+     img.phone {
+         width:100%;
+         display:inline-block;
+     }
+     
+     img.tablet, img.desktop {
+         display:none;
+     }  
+ } 
+ 
