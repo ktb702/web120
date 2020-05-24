@@ -1,8 +1,8 @@
 /* WEB120 BIG Website Styles */
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Poppins&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -50,7 +50,7 @@ footer {
          width:65%;
          float:left;
      }
-     
+      
       aside {    
          width:34%;
          float:right;
@@ -67,7 +67,7 @@ footer {
          display:none;
      }  
      
-     /* Change background color of navigation on selected page */ 
+     /* Change text on active page */ 
      .navbar li a.active {
         text-transform: uppercase;
         font-weight: bolder;
