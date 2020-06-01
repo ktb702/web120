@@ -1,0 +1,99 @@
+/* WEB120 Final Project Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Quicksand&display=swap');
+
+html {
+    background-color:rgba(212, 212, 212, 0.925);
+    color: rgb(2, 46, 17);
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main.wrapper {
+    overflow: auto;
+    min-height: 500px;
+}
+
+.title {
+    font-family: 'Amaranth', serif;
+    background-image: image();
+    font-weight: bold;
+    text-align: center;
+
+    background-image: url('../images/mountains800.jpg'); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 5em; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+ a:link, a:visited{
+    color:  rgb(2, 46, 17);
+} 
+
+footer {
+    clear:both;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1200px) {
+    
+   main.wrapper {
+        width:100%;
+        /* margin:auto; */
+    }
+            
+    img.desktop {
+        float:left;
+        width:50%;
+        display:inline-block;
+        margin: 1em 1em 1em 0;
+    }
+    
+    img.tablet, img.phone {
+        display:none;
+    }  
+    
+    /* Change background color of navigation on selected page */ 
+    ul.topnav li a.active {
+        text-shadow: 0.5px 0.5px rgb(2, 46, 17);
+        font-weight: bold;
+    } 
+}
+
+/* TABLET */
+@media all and (min-width:600px) and (max-width:1199px) {
+    
+    img.tablet {
+        width:100%;
+        display:inline-block;
+    }
+    
+    img.desktop, img.phone {
+        display:none;
+    }  
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.active {
+        text-shadow: 0.5px 0.5px rgb(2, 46, 17);
+        font-weight: bold;
+    } 
+}
+
+/* PHONE */
+@media all and (max-width:599px) {
+    
+    img.phone {
+        width:100%;
+        display:inline-block;
+    }
+    
+    img.tablet, img.desktop {
+        display:none;
+    }  
+
+}
