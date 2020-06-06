@@ -6,6 +6,10 @@ body {
     padding: 0;
     margin: 0;
 }
+section, aside{
+    box-sizing: border-box;
+    padding: 0.5em;
+}
 
 .title{
     text-align: center;
@@ -36,6 +40,7 @@ div.embed-container iframe {
 
 footer {
     clear:both;
+    text-align: center;
 }  
 
 /* DESKTOP */
@@ -57,7 +62,7 @@ footer {
      }
              
      img.desktop {
-         float:left;
+         /* float:left; */
          width:50%;
          display:inline-block;
          margin: 1em 1em 1em 0;
@@ -66,6 +71,14 @@ footer {
      img.tablet, img.phone {
          display:none;
      }  
+
+     /* show/hide month/agenda view calendar */
+     div.embed-container.month-view{
+        display: block;
+    }
+     div.embed-container.agenda-view{
+         display: none;
+     }    
      
      /* Change text on active page */ 
      .navbar li a.active {
@@ -97,6 +110,13 @@ footer {
          display:none;
      }  
      
+     /* show/hide month/agenda view calendar */
+     div.embed-container.month-view{
+        display: block;
+    }
+     div.embed-container.agenda-view{
+         display: none;
+     }
      
      /* Change background color of navigation on selected page */
      .navbar li a.active {
@@ -117,5 +137,13 @@ footer {
      img.tablet, img.desktop {
          display:none;
      }  
+
+     /* show/hide month/agenda view calendar */
+     div.embed-container.month-view{
+        display: none;
+    }
+     div.embed-container.agenda-view{
+         display: block;
+     }
  } 
  

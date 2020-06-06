@@ -12,12 +12,13 @@ define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 switch(THIS_PAGE){
         
     case '../index.php':
-        $title = "Portal Page";
+        $title = "WEB120 Portal";
+        $logo = 'fa-bank';
         $pageID = 'Portal';
     break;
     
     case 'big.php':
-        $title = "Home Page";
+        $title = "Home";
         $logo = 'fa-home';
         $pageID = 'BIG';
     break;
@@ -46,6 +47,12 @@ switch(THIS_PAGE){
         $pageID = 'Shopping Carts';
     break;
 
+    case 'webcam.php':
+        $title = "WebCam";
+        $logo = 'fa-eye';
+        $pageID = 'WebCam';
+    break;
+
     case 'map.php':
         $title = "Map";
         $logo = 'fa-map-o';
@@ -59,15 +66,9 @@ switch(THIS_PAGE){
     break;
 
     case 'youtube.php':
-        $title = "You Tube";
+        $title = "YouTube";
         $logo = 'fa-youtube-square';
-        $pageID = 'You Tube';
-    break;
-
-    case 'webcam.php':
-        $title = "WebCam";
-        $logo = 'fa-eye';
-        $pageID = 'WebCam';
+        $pageID = 'YouTube';
     break;
         
     default:
@@ -76,38 +77,33 @@ switch(THIS_PAGE){
         $pageID = 'Home Page';
 }
 
-/*
-$nav1['index.php'] = 'Welcome';
-$nav1['big/big.php'] = 'Big';
-$nav1['aia.php'] = 'AIA';
-$nav1['flowchart.php'] = 'Flowchart';
-$nav1['fp/index.php'] = 'Final Project';
-$nav1['contactme.php'] = 'Contact Kate';*/ 
-    
-/*
-Function to generate links and keep the highlight 
-on the current page */
-/*
-<li><a href="../index.php"><i class="fa fa-fw fa-bank"></i>WEB120 Portal</a></li>
-<li><a href="big.php" class="active"><i class="fa fa-fw fa-home"></i>Home</a></li>
-<li><a href="siteapp.php"><i class="fa fa-fw fa-html5"></i>Site vs App</a></li>
-<li><a href="galleries.php"><i class="fa fa-fw fa-camera-retro"></i>Galleries</a></li>
-<li><a href="flexbox.php"><i class="fa fa-fw fa-cube"></i>Flexbox</a></li>
-<li><a href="shopping-cart.php"><i class="fa fa-fw fa-shopping-basket"></i>Shopping Cart</a></li>
-<li><a href="webcam.php"><i class="fa fa-fw fa-eye"></i>Web Cam</a></li>
-*/
+$nav1['../index.php'] = 'WEB120 Portal';
+$nav1['big.php'] = 'Home';
+$nav1['siteapp.php'] = 'Site vs App';
+$nav1['galleries.php'] = 'Galleries';
+$nav1['flexbox.php'] = 'Flexbox';
+$nav1['shopping-cart.php'] = 'Shopping Cart';
+$nav1['webcam.php'] = 'Web Cam';
 
 function makeLinks($nav1)
 {
+    //set a breakpoint for debugging
+    // var_dump($config);
+    // die;
+
     $myReturn = '';
-    foreach($nav1 as $url => $text){
+    foreach($nav1 as $url => $text ){
         if($url == THIS_PAGE){
+            // $myReturn .= '<li><a class="active" href="' . $url . '"><i class="fa fa-fw ' . $logo . '"></i>' . $text . '</a></li>'; 
             $myReturn .= "<li><a class=\"active\" href=\"$url\">$text</a></li>";
         }
         else{
-            $myReturn .= "<li><a href=\"$url\">$text</a></li>";             
+            // $myReturn .= '<li><a href="' . $url . '"><i class="fa fa-fw ' . $logo . '"></i>' . $text . '</a></li>';
+            $myReturn .= "<li><a href=\"$url\">$text</a></li>"; 
         }
     }
     
+    return $myReturn;
+}
 
 ?>
