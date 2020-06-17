@@ -11,14 +11,15 @@
 
   <link rel="stylesheet" href="css/fp.css" />
   <link rel="stylesheet" href="css/nav.css" />
-  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/lightbox.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- </head>
+</head>
 
  <body>
     <main class="wrapper">
     <header>
-      <h1 class="title"> Great Northwest Trek </h1>
+      <a href="/web120/index.php"><h1 class="title"> Great Northwest Trek </h1></a>
       <nav>
         <ul class="topnav" id="myTopnav">
           <?=makeLinks($nav1)?>
